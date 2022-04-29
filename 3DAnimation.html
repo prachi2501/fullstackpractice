@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Animation</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #485461;
+        background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index:10;
+        height: 3rem;
+        background-color: red;
+    }
+    .menu{
+        max-width: 72rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+    }
+    .logo{
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 4rem;
+    }
+    .logo span{
+        font-weight:300;
+    }
+    .menu1{
+        height: 4rem;
+        width: 3rem;
+        cursor: pointer;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .bar{
+        width: 1.9rem;
+        height: 1.5px;
+        border-radius: 2px;
+        background-color: #eee;
+        transition: 0.5s;
+        position: relative;
+    }
+    .bar::before,
+    .bar::after{
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: #eee;
+        transition: 0.5s;
+    }
+    .bar::before{
+        transform: translateY(-9px);  
+    }
+    .bar::after{
+        transform: translateY(9px);  
+    }
+    .main{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: 5;
+        background-color: white;
+        overflow: hidden;
+    }
+    header{
+        min-height: 100vh;
+        width: 100%;
+        background: url("p2.jpg") no-repeat top center/cover;
+        position: relative;
+    }
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+
+    }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="navbar">
+           <div class="menu">
+               <h3 class="logo">Brand<span>Name</span></h3>
+               <div class="menu1">
+                   <div class="bar">
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="main-container">
+           <div class="main">
+               <header>
+                   <div class="overlay">
+                       <div class="inner">
+                           <h2 class="tittle">Future is here</h2>
+                           <p>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sit pariatur nobis, laboriosam minima reprehenderit animi ullam mollitia iste vero! Ab quidem, molestias eaque culpa, officiis laborum id sequi maiores rerum repellendus ipsam enim harum, nemo corporis vel iure reiciendis illo nisi quo? Deserunt sunt error quia amet excepturi et?
+                           </p>
+                           <a href="#" class="btn">Read more</a>
+                       </div>
+                   </div>
+               </header>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
